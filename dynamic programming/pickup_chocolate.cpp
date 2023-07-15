@@ -179,3 +179,17 @@ ninja can move from (i,j) to (i+1,j),(i+1,j+1),(i+1,j-1). */
      }
      return prev[0][c-1];
  }
+int main(){
+int r,c;
+cin>>r>>c;
+vector<vector<int>> grid(r,vector<int>(c));
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+cin>>grid[i][j];
+}
+}
+cout<<maximumChocolates(r,c,grid);
+return 0;
+}
