@@ -1,4 +1,5 @@
 #include <bits/stdc++.h> 
+/*we have to return true if the sum of all the element of any subset or subsequence of array arr equals to k */
 //  >>>>>>>> MEMOIZATION 
 // bool helper(int n,int i,int k,vector<int>& arr,vector<int>& mem)
 // {
