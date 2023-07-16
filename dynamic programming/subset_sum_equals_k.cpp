@@ -1,7 +1,7 @@
 #include <bits/stdc++.h> 
 /*we have to return true if the sum of all the element of any subset or subsequence of array arr equals to k */
 //  >>>>>>>> MEMOIZATION 
-// bool helper(int n,int i,int k,vector<int>& arr,vector<int>& mem)
+// bool helper(int n,int i,int k,vector<int>& arr,vector<vector<int>>& mem)
 // {
 //     if(k==0)
 //     {
@@ -11,9 +11,9 @@
 //     {
 //         return false;
 //     }
-//     if(mem[k]!=-1)
+//     if(mem[i][k]!=-1)
 //     {
-//         if(mem[k]==1)
+//         if(mem[i][k]==1)
 //         {
 //             return true;
 //         }else
@@ -25,17 +25,17 @@
 //     int b=int(helper(n,i+1,k,arr,mem));
 //     if(a==1||b==1)
 //     {
-//         mem[k]=1;
+//         mem[i][k]=1;
 //     }
 //     else{
-//         mem[k]=0;
+//         mem[i][k]=0;
 //     }
 
-//     return bool(mem[k]);
+//     return bool(mem[i][k]);
 
 // }
 // bool subsetSumToK(int n, int k, vector<int> &arr) {
-//      vector<int> mem(k+1,-1);
+//      vector<vector<int>> mem(n,vector<int>(k+1,-1));
 //     return helper(n,0,k,arr,mem);
 // }
 // >>>>>>>>TABULATION ,SPACE OPTIMIZATION
